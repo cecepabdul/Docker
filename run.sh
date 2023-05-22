@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Download docker-compose.yml
-curl -o docker-compose.yml https://dimas1.vps.webdock.cloud/file/docker-compose.yml
+curl -o docker-compose.yml https://raw.githubusercontent.com/cecepabdul/Docker/main/docker-compose.yml
 
 # Install Docker if not already installed
 if ! command -v docker &> /dev/null
@@ -12,17 +12,26 @@ then
 fi
 
 # Start containers
-while getopts "c:" option; do
+while getopts "c:e:" option; do
   case "${option}" in
     c)
       export TOKEN=${OPTARG}
       ;;
+    e)
+      export P2P_EMAIL=${OPTARG}
+      ;;
     *)
-      echo "Usage: $0 -c <TOKEN>"
+      echo "Usage: $0 -c <TOKEN> -e <EMAIL>"
       exit 1
       ;;
   esac
 done
+
+if [ -z "$TOKEN" ] || [ -z "$P2P_EMAIL" ]
+then
+    echo "Usage: $0 -c <TOKEN> -e <EMAIL>"
+    exit 1
+fi
 
 docker-compose up -d
 
@@ -32,6 +41,3 @@ docker ps
 # Get public IP
 PUBLIC_IP=$(curl -s https://api.ipify.org)
 echo "Public IP address: $PUBLIC_IP"
-
-# Delete script file
-rm start.sh
