@@ -1,24 +1,11 @@
 version: "3.3"
 services:
-  psclient:
-    image: packetstream/psclient:latest
-    container_name: psclient
-    restart: always
-    environment:
-      - CID=5H4N
-  proxyrack:
-    image: proxyrack/pop
-    container_name: proxyrack
-    restart: always
-    environment:
-      - api_key=31EKCFUSXMYPIPZHAD0UIYBVUYQ5KVUMFPHO1GVT
-      - device_name=vps
   peer2profit:
     image: peer2profit/peer2profit_linux:latest
     container_name: peer2profit
     restart: always
     environment:
-      - P2P_EMAIL=cecepabd67@gmail.com
+      - P2P_EMAIL=${P2P_EMAIL}
   tm:
     image: traffmonetizer/cli
     container_name: tm
