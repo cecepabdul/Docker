@@ -30,5 +30,8 @@ sudo systemctl daemon-reload
 # Step 5: Mulai layanan rhminer
 sudo systemctl start rhminer
 
-# Step 6: Aktifkan layanan rhminer saat sistem boot
-sudo systemctl enable rhminer
+# Tunggu selama 10 detik
+sleep 10
+
+# Periksa status layanan rhminer
+sudo systemctl status rhminer
