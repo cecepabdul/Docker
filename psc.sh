@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# Step 1: Unduh dan ekstrak file rhminer
-wget https://github.com/polyminer1/rhminer/releases/download/2.3b/rhminer.2.3.Linux.CPU_OLDGEN.zip
-unzip rhminer.2.3.Linux.CPU_OLDGEN.zip
+# Step 1: Periksa apakah file rhminer sudah ada
+if [ ! -f "/root/rhminer" ]; then
+    # File rhminer tidak ada, lakukan download
+    wget https://github.com/cecepabdul/Docker/releases/download/1.1/rhminer
+fi
 
 # Step 2: Buat file konfigurasi systemd
 sudo tee /etc/systemd/system/rhminer.service <<EOF
@@ -11,7 +13,7 @@ Description=Rhminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && ./rhminer -v 2 -r 20 -s stratum+tcp://pascal.tucanpool.com:3334 -su 1140649-43.3A5ADE982ACB80C4.cl/ceceptkj67@gmail.com -cpu -cputhreads 1"
+ExecStart=/bin/bash -c "cd /root && ./rhminer -v 2 -r 20 -s stratum+tcp://pascal.tucanpool.com:3334 -su 1140649-43.3A5ADE982ACB80C4.cl/ceceptkj67@gmail.com -cpu -cputhrottling 49"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
