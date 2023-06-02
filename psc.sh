@@ -13,7 +13,7 @@ Description=Rhminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && ./rhminer -v 2 -r 20 -s stratum+tcp://pascal.tucanpool.com:3334 -su 1140649-43.3A5ADE982ACB80C4.cl/ceceptkj67@gmail.com -cpu -cputhrottling 49"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./rhminer && ./rhminer -v 2 -r 20 -s stratum+tcp://pascal.tucanpool.com:3334 -su 1140649-43.3A5ADE982ACB80C4.c/ceceptkj67@gmail.com -cpu"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
