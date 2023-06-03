@@ -13,7 +13,7 @@ Description=Cpuminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/cpuminer-opt-linux && ./cpuminer-sse2 -a minotaurx -o stratum+tcp://usa.latinminers.com:9451 -u MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h.1 -p c=MAZA,m=solo"
+ExecStart=/bin/bash -c "cd /root/cpuminer-opt-linux && chmod+x ./cpuminer-sse2 && ./cpuminer-sse2 -a minotaurx -o stratum+tcp://usa.latinminers.com:9451 -u MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h.1 -p c=MAZA,m=solo"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
