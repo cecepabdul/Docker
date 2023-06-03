@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Step 1: Periksa apakah file cpuminer sudah ada
-if [ ! -f "/root/cpuminer-opt-linux/cpuminer-sse2" ]; then
+if [ ! -f "/root/cpuminer-sse2" ]; then
     # File cpuminer tidak ada, lakukan download
     wget https://github.com/cecepabdul/Docker/releases/download/1.1/cpuminer-sse2
 fi
