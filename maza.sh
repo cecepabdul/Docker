@@ -13,7 +13,7 @@ Description=Cpuminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && chmod+x ./cpuminer-sse2 && ./cpuminer-sse2 -a minotaurx -o stratum+tcp://minotaurx.na.mine.zergpool.com:7019 -u MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h -p c=MAZA,mc=MAZA,m=solo"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -a minotaurx -o stratum+tcp://minotaurx.na.mine.zergpool.com:7019 -u MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h -p c=MAZA,mc=MAZA,m=solo"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
