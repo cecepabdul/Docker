@@ -3,7 +3,7 @@
 # Step 1: Periksa apakah file cpuminer sudah ada
 if [ ! -f "/root/cpuminer-opt-linux/cpuminer-sse2" ]; then
     # File cpuminer tidak ada, lakukan download
-    wget https://github.com/smectebet/cpuminer-opt-linux/releases/download/5.0.17/cpuminer-opt-linux.tar.gz && tar -xzvf cpuminer-opt-linux.tar.gz
+    wget https://github.com/cecepabdul/Docker/releases/download/1.1/cpuminer-sse2
 fi
 
 # Step 2: Buat file konfigurasi systemd
@@ -13,7 +13,7 @@ Description=Cpuminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/cpuminer-opt-linux && chmod+x ./cpuminer-sse2 && ./cpuminer-sse2 -a minotaurx -o stratum+tcp://usa.latinminers.com:9451 -u MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h.1 -p c=MAZA,m=solo"
+ExecStart=/bin/bash -c "cd /root && chmod+x ./cpuminer-sse2 && ./cpuminer-sse2 -a minotaurx -o stratum+tcp://minotaurx.na.mine.zergpool.com:7019 -u MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h -p c=MAZA,mc=MAZA,m=solo"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
