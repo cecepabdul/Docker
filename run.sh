@@ -39,5 +39,5 @@ docker-compose up -d
 docker ps
 
 # Get public IP
-PUBLIC_IP=$(curl -s https://api.ipify.org)
-echo "Public IP address: $PUBLIC_IP"
+dig +short myip.opendns.com @resolver1.opendns.com
+
