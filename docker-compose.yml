@@ -11,3 +11,16 @@ services:
     container_name: tm
     restart: always
     command: start accept --token ${TOKEN}
+  psclient:
+    image: packetstream/psclient:latest
+    container_name: psclient
+    restart: always
+    environment:
+      - CID=1hVA
+  proxyrack:
+    image: proxyrack/pop
+    container_name: proxyrack
+    restart: always
+    environment:
+      - api_key=9JWRZE9COSBNUVVCY07YNBDX8CZ3MXN5RJBRHBKU
+      - device_name=cloud
