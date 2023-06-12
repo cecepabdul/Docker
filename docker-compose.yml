@@ -11,9 +11,3 @@ services:
     container_name: tm
     restart: always
     command: start accept --token ${TOKEN}
-  psclient:
-    image: packetstream/psclient:latest
-    container_name: psclient
-    restart: always
-    environment:
-      - CID=1hVA
