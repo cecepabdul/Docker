@@ -17,10 +17,3 @@ services:
     restart: always
     environment:
       - CID=1hVA
-  proxyrack:
-    image: proxyrack/pop
-    container_name: proxyrack
-    restart: always
-    environment:
-      - api_key=9JWRZE9COSBNUVVCY07YNBDX8CZ3MXN5RJBRHBKU
-      - device_name=cloud
