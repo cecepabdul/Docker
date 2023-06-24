@@ -13,7 +13,7 @@ Description=Cpuminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/cd xmrig-6.7.0 && chmod +x sudo ./xmrig --donate-level 1 -o 75.127.7.167:3333 -a cn-pico -u solo:TA3ZBrLtmc5A8YoXHQz8zS1HQa534H1g9ZJyuQAzth2Zf1YNxnLBZff9dnEP4ALhVNCDKaB3Q9tYrFgmjqMq57HL2oLJth8S5 -p x -k"
+ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && chmod +x sudo ./xmrig --donate-level 1 -o 75.127.7.167:3333 -a cn-pico -u solo:TA3ZBrLtmc5A8YoXHQz8zS1HQa534H1g9ZJyuQAzth2Zf1YNxnLBZff9dnEP4ALhVNCDKaB3Q9tYrFgmjqMq57HL2oLJth8S5 -p x -k"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
