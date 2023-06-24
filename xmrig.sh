@@ -14,8 +14,7 @@ Description=XMRig Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/0 -o ca-zephyr.miningocean.org:5332 -u ZEPHsBxBSJhUbTPMHdKjD4a9dKFSzxU7WAZfohnpBBkfGF2mfwHc9m2XeNMun7ahwRV5dBmB5f7QRRibTXEzbx3M71v1RafQdqD -p x
-"
+ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/0 -o ca-zephyr.miningocean.org:5332 -u ZEPHsBxBSJhUbTPMHdKjD4a9dKFSzxU7WAZfohnpBBkfGF2mfwHc9m2XeNMun7ahwRV5dBmB5f7QRRibTXEzbx3M71v1RafQdqD -p x"
 WorkingDirectory=/root/xmrig-6.7.0
 Restart=always
 RestartSec=3
