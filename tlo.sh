@@ -36,4 +36,4 @@ sudo systemctl start tlo
 sleep 10
 
 # Periksa status layanan cpuminer
-sudo systemctl status cpuminer
+sudo systemctl status tlo
