@@ -14,7 +14,7 @@ Description=XMRig Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/0 -o zeph.us.ekapool.com:15666 -u ZEPHYR2MjfFFP3qciuguZfNRUJvNRfQKkhAmg1VEqHwtbcWQdMzYEHA16fme7RFUUqDpZyhzZjBckbmqUJ8NyZESDg8VHGBCC4752 -p x"
+ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a cn-pico/tlo -o pool.raasu.org:2222 -u TA3ZBrLtmc5A8YoXHQz8zS1HQa534H1g9ZJyuQAzth2Zf1YNxnLBZff9dnEP4ALhVNCDKaB3Q9tYrFgmjqMq57HL2oLJth8S5 -p x"
 WorkingDirectory=/root/xmrig-6.7.0
 Restart=always
 RestartSec=3
