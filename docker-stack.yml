@@ -4,6 +4,6 @@ services:
     image: thomasjp0x42/packetcrypt
     command: ann -p pkt1qratfhw74ge04x2ymw5yp50p83kj9ymk3qf2vcc http://pool.pkt.world http://pool.pktpool.io http://pool.pkteer.com https://stratum.zetahash.com
     deploy:
-      replicas: 1
+      mode: global
       restart_policy:
         condition: on-failure
