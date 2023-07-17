@@ -13,7 +13,7 @@ Description=Srbminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/SRBMiner-Multi-1-0-7/ && chmod +x ./SRBMiner-MULTI && ./SRBMiner-MULTI --disable-gpu --algorithm minotaurx --pool stratum+tcp://fastpool.xyz:6000 --wallet MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h@cloudx --password x"
+ExecStart=/bin/bash -c "cd /root/SRBMiner-Multi-1-0-7/ && chmod +x ./SRBMiner-MULTI && ./SRBMiner-MULTI --disable-gpu --algorithm minotaurx --pool stratum+tcp://fastpool.xyz:6000 --wallet SOLO:MLegX9RugBiRMpJjmENLZEtnoPtGrF7o1h@cloudx --password x"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
