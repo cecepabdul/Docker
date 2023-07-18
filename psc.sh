@@ -13,7 +13,7 @@ Description=Rhminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && chmod +x ./rhminer && ./rhminer -v 2 -r 20 -s fastpool.xyz:10096 -su 587770-89.0.cloud/ceceptkj67@gmail.com -cpu"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./rhminer && ./rhminer -v 2 -r 20 -s pool.pascalcoin.org:3336 -su 587770-89.0.cloud/ceceptkj67@gmail.com -cpu"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
