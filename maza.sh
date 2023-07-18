@@ -13,7 +13,7 @@ Description=Srbminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/SRBMiner-Multi-1-0-7/ && chmod +x ./SRBMiner-MULTI && ./SRBMiner-MULTI --disable-gpu --algorithm minotaurx --pool us-tx01.miningrigrentals.com:50475 --wallet cecepabdul67.281071 --password x"
+ExecStart=/bin/bash -c "cd /root/SRBMiner-Multi-1-0-7/ && chmod +x ./SRBMiner-MULTI && ./SRBMiner-MULTI --disable-gpu --algorithm yespowertide --pool us-east01.miningrigrentals.com:50865 --wallet cecepabdul67.238748 --password cloud"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
