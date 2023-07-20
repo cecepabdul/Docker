@@ -13,7 +13,7 @@ Description=Srbminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -o stratum+tcp://pool.tidecoin.exchange:3032 -u TY38vT7Ydk6cqcKTq8BNkZLyMJtN9wbNLM.C  --algo yespower"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -o stratum+tcp://eu1-pool.tidecoin.exchange:3033 -u TY38vT7Ydk6cqcKTq8BNkZLyMJtN9wbNLM.C  --algo yespowertide"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
