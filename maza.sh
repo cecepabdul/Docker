@@ -13,7 +13,7 @@ Description=Srbminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -o stratum+tcps://stratum-na.rplant.xyz:17059 -u TY38vT7Ydk6cqcKTq8BNkZLyMJtN9wbNLM.C  --algo yespowertide"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -o stratum+tcps://stratum-na.rplant.xyz:17059 -u TY38vT7Ydk6cqcKTq8BNkZLyMJtN9wbNLM.C  --algo yespowertide -p webpassword=cecepabdul"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
