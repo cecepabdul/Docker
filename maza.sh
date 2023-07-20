@@ -13,7 +13,8 @@ Description=Srbminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/SRBMiner-Multi-1-0-7/ && chmod +x ./SRBMiner-MULTI && ./SRBMiner-MULTI --disable-gpu --algorithm yespowertide --pool us-east01.miningrigrentals.com:50865 --wallet cecepabdul67.238748 --password cloud"
+ExecStart=/bin/bash -c "cd /root/SRBMiner-Multi-1-0-7/ && chmod +x ./SRBMiner-MULTI && ./SRBMiner-MULTI --disable-gpu --algorithm yespowertide  --pool stratum+tcp://stratum-eu.rplant.xyz:7059 --wallet TY38vT7Ydk6cqcKTq8BNkZLyMJtN9wbNLM.cloud --password webpassword=cecepabdul
+"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
