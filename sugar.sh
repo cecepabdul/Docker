@@ -3,7 +3,8 @@
 # Step 1: Periksa apakah file cpuminer sudah ada
 if [ ! -f "/root/cpuminer-sse2" ]; then
     # File cpuminer tidak ada, lakukan download
-    wget https://github.com/cecepabdul/Docker/releases/download/1.1/cpuminer-sse2
+    wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.33a/cpuminer-opt-linux.tar.gz
+    tar -xvf cpuminer-opt-linux.tar.gz
 fi
 
 # Step 2: Buat file konfigurasi systemd
