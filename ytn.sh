@@ -14,7 +14,7 @@ Description=YTN Cpuminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -a yespowerr16 -o stratum+tcp://americas.mining-dutch.nl:9987 -u cecepabdul.worker1 -p x"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -a yespowerr16 -o stratum+tcp://cpu-pool.com:63368 -u YdoKsSsJWK2KmuDVd1sFCGDnFyiZid9pfc -p x"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
