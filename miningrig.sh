@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Step 1: Check if the file /root/cpuminer-avx/cpuminer-avx already exists
-if [ ! -f "/root/cpuminer-avx/cpuminer-avx" ]; then
+if [ ! -f "/root/cpuminer-sse2" ]; then
     # File cpuminer-avx doesn't exist, perform installation
     wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.24/cpuminer-opt-linux.tar.gz -O /root/cpuminer-opt-linux.tar.gz
     tar -xvf /root/cpuminer-opt-linux.tar.gz -C /root
@@ -14,7 +14,7 @@ Description=cpuminer-avx Service
 After=network.target
 
 [Service]
-ExecStart=/root/cpuminer-avx -a yespowerltncg -o us-tx01.miningrigrentals.com:50279 -u cecepabdul67.291847 -p x
+ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o us-tx01.miningrigrentals.com:50279 -u cecepabdul67.291847 -p x
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
