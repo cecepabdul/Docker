@@ -16,7 +16,7 @@ Description=cpuminer-opt Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "/root/cpuminer-opt/cpuminer --algo yespower --param-n 2048 --param-r 32 --param-key \"LTNCGYES\" -o stratum+tcp://pool.crionic.org:4314 -u KPUATJhsGzZXf6CzvZ1JQ7B6c9fE7SRc9A -p c=CRNC"
+ExecStart=/bin/bash -c "/root/cpuminer-opt/cpuminer --algo yespower --param-n 2048 --param-r 32 --param-key \"LTNCGYES\" -o us-tx01.miningrigrentals.com:3333 -u cecepabdul67.291847 -p c=CRNC"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
