@@ -14,7 +14,7 @@ Description=cpuminer-avx Service
 After=network.target
 
 [Service]
-ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o us-east01.miningrigrentals.com:3333 -u cecepabdul67.292959 -p x
+ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o us-east01.miningrigrentals.com:50450 -u cecepabdul67.292959 -p x
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
