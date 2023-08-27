@@ -14,7 +14,7 @@ Description=XMRig Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a cn-pico/tlo -o pool.raasu.org:3333 -u TA3ZBrLtmc5A8YoXHQz8zS1HQa534H1g9ZJyuQAzth2Zf1YNxnLBZff9dnEP4ALhVNCDKaB3Q9tYrFgmjqMq57HL2oLJth8S5 -p x"
+ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/0 --donate-level 1 -o pool.eleneum.org:3355 -u 0x80AFA39159589A888e33d82e195BECc555e6AB83  -p x"
 WorkingDirectory=/root/xmrig-6.7.0
 Restart=always
 RestartSec=3
