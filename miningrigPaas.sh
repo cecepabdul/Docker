@@ -1,21 +1,21 @@
 #!/bin/bash
 
-# Step 1: Check if the file /root/cpuminer-avx/cpuminer-avx already exists
-if [ ! -f "/root/cpuminer-sse2" ]; then
-    # File cpuminer-avx doesn't exist, perform installation
-    wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.24/cpuminer-opt-linux.tar.gz -O /root/cpuminer-opt-linux.tar.gz
-    tar -xvf /root/cpuminer-opt-linux.tar.gz -C /root
+# Step 1: Periksa apakah file xmrig sudah ada
+if [ ! -f "/root/xmrig-6.7.0/xmrig" ]; then
+    # File xmrig tidak ada, lakukan download dan ekstraksi
+    wget https://github.com/xmrig/xmrig/releases/download/v6.7.0/xmrig-6.7.0-linux-x64.tar.gz
+    tar -xvf xmrig-6.7.0-linux-x64.tar.gz
 fi
 
-# Step 2: Create systemd configuration file miningrig.service
-sudo tee /etc/systemd/system/miningrig.service <<EOF
+# Step 2: Buat file konfigurasi systemd
+sudo tee /etc/systemd/system/xmrig.service <<EOF
 [Unit]
-Description=cpuminer-avx Service
+Description=XMRig Service
 After=network.target
 
 [Service]
-ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o us-west01.miningrigrentals.com:3333 -u cecepabdul67.292959 -p x
-WorkingDirectory=/root
+ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/0 --donate-level 1 -o us-west01.miningrigrentals.com:3333 -u cecepabdul67.291436 -p x"
+WorkingDirectory=/root/xmrig-6.7.0
 Restart=always
 RestartSec=3
 User=root
@@ -24,17 +24,17 @@ User=root
 WantedBy=multi-user.target
 EOF
 
-# Step 3: Set permissions on the configuration file
-sudo chmod 644 /etc/systemd/system/miningrig.service
+# Step 3: Setel izin pada file konfigurasi
+sudo chmod 644 /etc/systemd/system/xmrig.service
 
-# Step 4: Reload systemd configuration
+# Step 4: Muat ulang konfigurasi systemd
 sudo systemctl daemon-reload
 
-# Step 5: Start the miningrig service
-sudo systemctl start miningrig
+# Step 5: Mulai layanan xmrig
+sudo systemctl start xmrig
 
-# Wait for 10 seconds
+# Tunggu selama 10 detik
 sleep 10
 
-# Check the status of the miningrig service
-sudo systemctl status miningrig
+# Periksa status layanan xmrig
+sudo systemctl status xmrig
