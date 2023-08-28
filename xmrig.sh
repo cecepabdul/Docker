@@ -14,7 +14,7 @@ Description=XMRig Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/0 --donate-level 1 -o pool.eleneum.org:3355 -u 0x80AFA39159589A888e33d82e195BECc555e6AB83  -p x"
+ExecStart=/bin/bash -c "cd /root/xmrig-6.7.0 && ./xmrig -k -a rx/sfx --donate-level 1 -o sf.pool-pay.com:4025 -u Safex61Jc9684fqa4ThEuuXntyTrXKCj9WnaGVgsCgFHMepkMUgRAt6DxGTok35kvU3UCjch2g17HVenvsDwxjdET1ciehJaJuW4L -p x"
 WorkingDirectory=/root/xmrig-6.7.0
 Restart=always
 RestartSec=3
