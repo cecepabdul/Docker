@@ -14,7 +14,7 @@ Description=Cpuminer Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -a minotaurx  -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RFP5QbYEoYYd7vm7A6reZNYaZ4vLcMovS2.x -p webpassword=cecepabdul"
+ExecStart=/bin/bash -c "cd /root && chmod +x ./cpuminer-sse2 && ./cpuminer-sse2 -a yespowersugar  -o stratum+tcps://stratum-na.rplant.xyz:17042 -u sugar1q4vcxkt82achnuqzwsavgha6jyurtgywj26grpj.x -p webpassword=cecepabdul"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
