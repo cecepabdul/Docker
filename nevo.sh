@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Step 1: Periksa apakah file xmrig sudah ada
-if [ ! -f "/root" ]; then
+if [ ! -f "/root/nevorig-v6.20.0-x86_64-linux-gnu" ]; then
     # File xmrig tidak ada, lakukan download dan ekstraksi
-    wget https://github.com/cecepabdul/Docker/releases/download/1.2/xmrig
+    wget nevorig-v6.20.0-x86_64-linux-gnu.tar.xz
+    tar -xvf nevorig-v6.20.0-x86_64-linux-gnu.tar.xz
 fi
 
 # Step 2: Buat file konfigurasi systemd
@@ -13,7 +14,7 @@ Description=nevo Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "chmod +x ./xmrig && ./xmrig -k -a rx/nevo --donate-level 1 -o randomx.rplant.xyz:17102 -u NS2KMCKhpLSbz2RtKSLy92VRyzpbny6BfcX9uLLP3EsAF4rHQUGNtHbX6Uytbodj88b9tfUWzUebiXVyn2ZaFAqS13aSkdj67.cloud -p x"
+ExecStart=/bin/bash -c "cd /root/nevorig-v6.20.0-x86_64-linux-gnu/ && chmod +x ./xmrig && ./xmrig -k -a rx/nevo --donate-level 1 -o randomx.rplant.xyz:17102 -u NS2KMCKhpLSbz2RtKSLy92VRyzpbny6BfcX9uLLP3EsAF4rHQUGNtHbX6Uytbodj88b9tfUWzUebiXVyn2ZaFAqS13aSkdj67.cloud -p x"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
