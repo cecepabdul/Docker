@@ -3,7 +3,7 @@
 # Step 1: Periksa apakah file xmrig sudah ada
 if [ ! -f "/root/nevorig-v6.20.0-x86_64-linux-gnu" ]; then
     # File xmrig tidak ada, lakukan download dan ekstraksi
-    wget nevorig-v6.20.0-x86_64-linux-gnu.tar.xz
+    wget https://github.com/nevocoin/NEVORig/releases/download/v6.20.0/nevorig-v6.20.0-x86_64-linux-gnu.tar.xz
     tar -xvf nevorig-v6.20.0-x86_64-linux-gnu.tar.xz
 fi
 
