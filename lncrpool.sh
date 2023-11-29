@@ -8,7 +8,7 @@ if [ ! -f "/root/cpuminer-sse2" ]; then
 fi
 
 # Step 2: Buat file konfigurasi systemd opt.service
-sudo tee /etc/systemd/system/lncr.service <<EOF
+sudo tee /etc/systemd/system/lncrpool.service <<EOF
 [Unit]
 Description=cpuminer-opt Service
 After=network.target
@@ -25,16 +25,16 @@ WantedBy=multi-user.target
 EOF
 
 # Step 3: Set permissions on the configuration file
-sudo chmod 644 /etc/systemd/system/lncr.service
+sudo chmod 644 /etc/systemd/system/lncrpool.service
 
 # Step 4: Reload systemd configuration
 sudo systemctl daemon-reload
 
 # Step 5: Start the miningrig service
-sudo systemctl start lncr
+sudo systemctl start lncrpool
 
 # Wait for 10 seconds
 sleep 10
 
 # Check the status of the miningrig service
-sudo systemctl status lncr
+sudo systemctl status lncrpool
