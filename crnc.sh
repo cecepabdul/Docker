@@ -1,20 +1,22 @@
 #!/bin/bash
 
-# Step 1: Check if the file /root/cpuminer-avx/cpuminer-avx already exists
-if [ ! -f "/root/cpuminer-sse2" ]; then
-    # File cpuminer-avx doesn't exist, perform installation
-    wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.24/cpuminer-opt-linux.tar.gz -O /root/cpuminer-opt-linux.tar.gz
-    tar -xvf /root/cpuminer-opt-linux.tar.gz -C /root
+# Step 1: Periksa apakah file /root/cpuminer-opt/cpuminer sudah ada
+if [ ! -f "/root/cpuminer-opt/cpuminer" ]; then
+    # File cpuminer belum ada, lakukan instalasi
+    sudo apt-get install -y build-essential automake libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev zlib1g-dev git
+    git clone https://github.com/JayDDee/cpuminer-opt.git /root/cpuminer-opt
+    cd /root/cpuminer-opt
+    ./build.sh
 fi
 
-# Step 2: Create systemd configuration file crnc.service
+# Step 2: Buat file konfigurasi systemd opt.service
 sudo tee /etc/systemd/system/crnc.service <<EOF
 [Unit]
-Description=cpuminer-avx Service
+Description=cpuminer-opt Service
 After=network.target
 
 [Service]
-ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o stratum+tcp://yespowerLTNCG.na.mine.zpool.ca:6245 -u ltc1qg4dal5gcrnu489tylw5f8gh7addyuergqdhnym -p c=LTC,zap=CRNC
+ExecStart=/bin/bash -c "/root/cpuminer-opt/cpuminer --algo yespower --param-n 2048 --param-r 32 --param-key \"LTNCGYES\" -o stratum+tcp://yespowerLTNCG.na.mine.zpool.ca:6245 -u ltc1qg4dal5gcrnu489tylw5f8gh7addyuergqdhnym -p c=LTC,zap=CRNC"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
