@@ -14,7 +14,7 @@ Description=cpuminer-opt Service
 After=network.target
 
 [Service]
-ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o na.mining4people.com:3384 -u MFuhz3X3Qap61qjeRQVqnBdCF5U3M6JXbB.c -p x
+ExecStart=/root/cpuminer-sse2 -a yespowerltncg -o na.mining4people.com:3384 -u MGUzV5jQZ4YEmsk4QQG4jkQcY5bEbYL4Nc.c -p x
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
