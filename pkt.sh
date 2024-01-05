@@ -3,7 +3,7 @@
 # Step 1: Periksa apakah file packetcrypt-v0.5.2-linux_amd64 sudah ada
 if [ ! -f "/root/packetcrypt-v0.5.2-linux_amd64" ]; then
     # File packetcrypt-v0.5.2-linux_amd64 tidak ada, lakukan download
-    wget https://github.com/cjdelisle/packetcrypt_rs/releases/download/packetcrypt-v0.5.2/packetcrypt-v0.5.2-linux_amd64
+    wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt
 fi
 
 # Step 2: Buat file konfigurasi systemd
@@ -14,7 +14,7 @@ After=network.target
 
 [Service]
 User=root
-ExecStart=/bin/bash -c "cd /root && chmod +x ./packetcrypt-v0.5.2-linux_amd64 && ./packetcrypt-v0.5.2-linux_amd64 ann -p pkt1qn8mrx2et6y7u3lv5aejjl7725qt88zyfv5egpf https://stratum.zetahash.com http://pool.pkt.world http://pool.pktpool.io/ http://pool.pkteer.com "
+ExecStart=/bin/bash -c "cd /root && chmod +x ./packetcrypt-v0.5.2-linux_amd64 && ./packetcrypt-v0.5.2-linux_amd64 ann -p pkt1qn8mrx2et6y7u3lv5aejjl7725qt88zyfv5egpf https://stratum.zetahash.com http://pool.pkt.world"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
