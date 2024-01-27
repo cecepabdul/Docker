@@ -16,7 +16,7 @@ Description=cpuminer-opt Service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c "/root/cpuminer-opt/cpuminer --algo yespower --param-n 2048 --param-r 32 --param-key \"LTNCGYES\" -o -o us.mining4people.com:4170 -u KPUATJhsGzZXf6CzvZ1JQ7B6c9fE7SRc9A.c -p x"
+ExecStart=/bin/bash -c "/root/cpuminer-opt/cpuminer --algo yespower --param-n 2048 --param-r 32 --param-key \"LTNCGYES\" -o us.mining4people.com:4170 -u KPUATJhsGzZXf6CzvZ1JQ7B6c9fE7SRc9A.c -p x"
 WorkingDirectory=/root
 Restart=always
 RestartSec=3
